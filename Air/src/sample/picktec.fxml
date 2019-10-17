@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="248.0" prefWidth="401.0" style="-fx-background-color: #00FFCC;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PickControl">
+   <children>
+      <ChoiceBox fx:id="choiceBox" layoutX="34.0" layoutY="191.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" />
+      <Button layoutX="196.0" layoutY="187.0" mnemonicParsing="false" onAction="#pickAdd" prefHeight="33.0" prefWidth="57.0" style="-fx-background-color: #ffffff;" text="ตกลง">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeButton" layoutX="279.0" layoutY="187.0" mnemonicParsing="false" onAction="#done" prefHeight="33.0" prefWidth="74.0" style="-fx-background-color: #ffffff;" text="เสร็จ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="textArea" layoutX="34.0" layoutY="61.0" prefHeight="101.0" prefWidth="323.0" />
+      <Label layoutX="137.0" layoutY="-5.0" text="เลือกช่าง" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-26.0" layoutY="33.0" prefHeight="12.0" prefWidth="459.0" style="-fx-background-color: #ffffff;" />
+   </children>
+</Pane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="937.0" style="-fx-background-color: #00FFCC;" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BookingControl">
+   <children>
+      <TabPane layoutX="-2.0" layoutY="59.0" prefHeight="517.0" prefWidth="944.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="จองบริการลูกค้า">
+               <content>
+                  <Pane prefHeight="489.0" prefWidth="844.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="33.0" text="ชื่อลูกค้า" textFill="#16a486">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="301.0" layoutY="33.0" text="ประเภทบริการ" textFill="#16a486">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="datePicker" layoutX="102.0" layoutY="82.0" prefHeight="25.0" prefWidth="151.0" />
+                        <Label layoutX="61.0" layoutY="84.0" text="วันที่" textFill="#16a486">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="add" layoutX="787.0" layoutY="130.0" mnemonicParsing="false" onAction="#addBooking" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: #ffffff;" text="บันทึก">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <TableView fx:id="tableView" layoutX="14.0" layoutY="127.0" prefHeight="346.0" prefWidth="759.0">
+                          <columns>
+                            <TableColumn fx:id="order" prefWidth="41.0" text="ลำดับ" />
+                              <TableColumn fx:id="date" prefWidth="106.0" text="วันที่" />
+                              <TableColumn fx:id="timeBooking" prefWidth="75.0" text="เวลา" />
+                              <TableColumn fx:id="name" prefWidth="89.0" text="ชื่อ" />
+                              <TableColumn fx:id="phone" prefWidth="96.0" text="เบอร์โทร" />
+                            <TableColumn fx:id="service" prefWidth="104.0" text="ประเภทบริการ" />
+                              <TableColumn fx:id="price" prefWidth="67.0" text="ราคา" />
+                              <TableColumn fx:id="tec" prefWidth="107.0" text="ช่าง" />
+                              <TableColumn fx:id="status" prefWidth="73.0" text="สถานะ" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="787.0" layoutY="426.0" mnemonicParsing="false" onAction="#gotoMenu" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: #ffffff;" text="ย้อนกลับ">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font></Button>
+                        <TextField fx:id="phone_Cus" layoutX="402.0" layoutY="82.0" />
+                        <Label layoutX="331.0" layoutY="84.0" text="เบอร์โทร" textFill="#16a486">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name_Cus" layoutX="103.0" layoutY="31.0" />
+                        <Label layoutX="578.0" layoutY="33.0" text="ช่วงเวลา" textFill="#16a486">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="578.0" layoutY="84.0" text="ที่อยู่" textFill="#16a486">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="address_Cus" layoutX="635.0" layoutY="72.0" prefHeight="45.0" prefWidth="164.0" />
+                        <ChoiceBox fx:id="serviceCB" layoutX="394.0" layoutY="31.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" />
+                        <ChoiceBox fx:id="timeBookingCB" layoutX="650.0" layoutY="31.0" prefHeight="25.0" prefWidth="148.0" style="-fx-background-color: #ffffff;" />
+                        <Button fx:id="del" layoutX="787.0" layoutY="241.0" mnemonicParsing="false" onAction="#delBooking" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: #ffffff;" text="ลบ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Button>
+                        <Button layoutX="787.0" layoutY="185.0" mnemonicParsing="false" onAction="#addTOPayment" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: #ffffff;" text="เสร็จ">
+                           <font>
+                              <Font name="System Bold Italic" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="787.0" layoutY="350.0" mnemonicParsing="false" onAction="#showAddress" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: #ffffff;" text="รายละเอียด">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="787.0" layoutY="297.0" mnemonicParsing="false" onAction="#pick" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: #ffffff;" text="เลือกช่าง">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Pane layoutX="888.0" layoutY="306.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #ffffff;">
+                           <children>
+                              <Pane layoutX="23.0" layoutY="1.0" prefHeight="30.0" prefWidth="6.0" rotate="-127.6" style="-fx-background-color: #16a486;" />
+                              <Pane layoutX="8.0" layoutY="11.0" prefHeight="18.0" prefWidth="5.0" rotate="127.9" style="-fx-background-color: #16a486;" />
+                           </children>
+                        </Pane>
+                        <Button layoutX="887.0" layoutY="306.0" mnemonicParsing="false" onAction="#inAddress2" opacity="0.05" prefHeight="30.0" prefWidth="43.0" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="327.0" layoutY="7.0" text="การจองบริการ" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-18.0" layoutY="58.0" prefHeight="30.0" prefWidth="1018.0" style="-fx-background-color: #ffffff;" />
+   </children>
+</Pane>
